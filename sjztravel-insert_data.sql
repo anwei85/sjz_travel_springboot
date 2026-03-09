@@ -1,9 +1,9 @@
---之所以先truncate 是因为主键自增长，防止主键不是从1开始自增
+-- 之所以先truncate 是因为主键自增长，防止主键不是从1开始自增
 truncate table tastyfood;
 truncate table scenic;
 truncate table ticket;
-truncate table `order`;--关键字，需要加引号
-truncate table `user`;--关键字，需要加引号
+truncate table `order`;-- 关键字，需要加引号
+truncate table `user`;-- 关键字，需要加引号
 truncate table manager;
 
 INSERT INTO sjztravel.`user` (userid,username,password,name,email,telephone,birthday,sex,state,code) VALUES

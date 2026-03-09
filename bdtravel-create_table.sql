@@ -1,5 +1,5 @@
-create database bdtravel;
-use bdtravel;
+create database sjztravel;
+use sjztravel;
 
 create table `scenic`(
 `id` int not null auto_increment,

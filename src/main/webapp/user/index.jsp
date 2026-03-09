@@ -153,7 +153,7 @@
 
 			<!-- 京畿胜景宣传图 -->
             <div class="container-fluid" style="margin-top:30px;">
-				<img src="../image/zmbd.PNG" width="100%"/>
+				<img src="../image/zmsjz.PNG" width="100%"/>
 			</div>
 
 

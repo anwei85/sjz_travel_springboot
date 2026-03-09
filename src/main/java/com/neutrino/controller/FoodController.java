@@ -55,7 +55,7 @@ public class FoodController {
         //当上传的图片不为空的时候才去存储路径,否则不存
         if (foodImage.getSize() != 0) {
             //将上传的文件保存到磁盘中
-            String path = "E:\\workspace_IDEA\\bdtravel\\src\\main\\webapp\\image\\foodpic";
+            String path = "E:\\workspace_IDEA\\sjztravel\\src\\main\\webapp\\image\\foodpic";
             String imageName = UploadUtil.upload(foodImage,path);
             //将图片路径封装到Scenic中
             tastyFood.setPic("image/foodpic/"+imageName);
@@ -83,7 +83,7 @@ public class FoodController {
         //当上传的图片不为空的时候才去存储路径,否则不存
         if (foodImage.getSize() != 0) {
             //将上传的文件保存到磁盘中
-            String path = "E:\\workspace_IDEA\\bdtravel\\src\\main\\webapp\\image\\foodpic";
+            String path = "E:\\workspace_IDEA\\sjztravel\\src\\main\\webapp\\image\\foodpic";
             String imageName = UploadUtil.upload(foodImage,path);
             //将图片路径封装到Scenic中
             tastyFood.setPic("image/foodpic/"+imageName);

@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @MapperScan({"com.neutrino.mapper"})
 @SpringBootApplication
-public class BdTravelApplication {
+public class sjzTravelApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BdTravelApplication.class, args);
+        SpringApplication.run(sjzTravelApplication.class, args);
     }
 
 }

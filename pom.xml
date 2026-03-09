@@ -11,10 +11,10 @@
     </parent>
 
     <groupId>com.neutrino</groupId>
-    <artifactId>bd_travel_springboot</artifactId>
+    <artifactId>sjz_travel_springboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>bd_travel_springboot</name>
-    <description>bd_travel_springboot</description>
+    <name>sjz_travel_springboot</name>
+    <description>sjz_travel_springboot</description>
 
     <properties>
         <java.version>1.8</java.version>

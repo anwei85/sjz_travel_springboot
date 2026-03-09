@@ -78,7 +78,7 @@ public class ScenicController {
         //当上传的图片不为空的时候才去存储路径,否则不存
         if (scenicImage.getSize() != 0) {
             //将上传的文件保存到磁盘中
-            String path = "E:\\workspace_IDEA\\bdtravel\\src\\main\\webapp\\image\\scenic\\pic";
+            String path = "E:\\workspace_IDEA\\sjztravel\\src\\main\\webapp\\image\\scenic\\pic";
             String imageName = UploadUtil.upload(scenicImage,path);
             //将图片路径封装到Scenic中
             scenic.setPic("image/scenic/pic/"+imageName);
@@ -107,7 +107,7 @@ public class ScenicController {
         //当上传的图片不为空的时候才去存储路径,否则不存
         if (scenicImage.getSize() != 0) {
             //将上传的文件保存到磁盘中
-            String path = "E:\\workspace_IDEA\\bdtravel\\src\\main\\webapp\\image\\scenic\\pic";
+            String path = "E:\\workspace_IDEA\\sjztravel\\src\\main\\webapp\\image\\scenic\\pic";
             String imageName = UploadUtil.upload(scenicImage,path);
             //将图片路径封装到Scenic中
             scenic.setPic("image/scenic/pic/"+imageName);

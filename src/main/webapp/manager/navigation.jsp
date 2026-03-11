@@ -41,7 +41,7 @@
             <ul class="nav" id="side-menu">
                 <li class="sidebar-search">
                     <div class="input-group custom-search-form">
-                        <input type="text" disabled="disabled" class="form-control" placeholder="保定旅行资讯网主页">
+                        <input type="text" disabled="disabled" class="form-control" placeholder="石家庄旅行资讯网主页">
                         <span class="input-group-btn">
 								<button class="btn btn-default" type="button">
                                     <a href="${pageContext.request.contextPath }/user">

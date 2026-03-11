@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>保定旅行咨询网</title>
+        <title>石家庄旅行咨询网</title>
         <link rel="shortcut icon" href="../image/logo1.png" type="image/x-icon" />
         <!-- Bootstrap Core CSS -->
         <link href="<%=basePath%>css/bootstrap.min.css" rel="stylesheet">

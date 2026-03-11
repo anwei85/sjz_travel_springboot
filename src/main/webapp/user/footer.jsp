@@ -18,6 +18,6 @@
 		</ul>
 	</div>
 	<div style="text-align: center;margin-top: 5px;margin-bottom:20px;">
-		Copyright &copy; 2017-2018 保定旅行资讯网 www.sjztravel.com版权所有
+		Copyright &copy; 2017-2018 石家庄旅行资讯网 www.sjztravel.com版权所有
 	</div>
 </div>

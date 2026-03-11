@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>保定旅行咨询网</title>
+		<title>石家庄旅行咨询网</title>
         <link rel="shortcut icon" href="../image/logo1.png" type="../image/x-icon" />
 		<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" />
         <link href="../css/styles.css" rel="stylesheet" type="text/css" />
@@ -112,7 +112,7 @@
                 <div class="col-md-4 column" style="width:260px;">
                     <div class="clumn" style="width:260px;border:1px solid #E8E8E8">
                         <div class="clumn_tit t01">
-                            <span>保定当地游</span>
+                            <span>石家庄当地游</span>
                         </div>
                         <div class="clumn _con">
                             <ul class="clu_ul page_ul">

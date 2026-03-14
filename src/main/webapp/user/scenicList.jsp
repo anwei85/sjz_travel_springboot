@@ -121,70 +121,87 @@
                     </div>
                 </div>
                 <%--地址选择+服务保障--%>
-                <div class="col-md-4 column" style="width:260px;">
-                    <div class="clumn" style="width:260px;border:1px solid #E8E8E8">
-                        <div class="clumn_tit t01">
-                            <span>石家庄当地游</span>
+                <!-- 外层模块容器（保留原有结构，优化样式） -->
+                <div class="col-md-4 column"
+                    style="width:260px;border:1px solid #eee; border-radius: 6px; padding: 10px; margin-bottom: 15px;">
+                    <div class="clumn_tit t01"
+                        style="font-size: 16px; font-weight: bold; color: #222; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px solid #eee;">
+                        <span>石家庄当地游</span>
+                    </div>
+                
+                    <!-- 核心区县列表（带hover悬浮效果） -->
+                    <div class="clumn_con" style="padding: 10px; font-size: 14px;">
+                        <!-- 市辖区 -->
+                        <div style="margin-bottom: 8px; font-weight: bold; color: #333;">市辖区</div>
+                        <div style="margin-bottom: 12px; line-height: 1.8;">
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=长安区"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">长安区</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=桥西区"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">桥西区</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=新华区"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">新华区</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=裕华区"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">裕华区</a><br>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=井陉矿区"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">井陉矿区</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=藁城区"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">藁城区</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=鹿泉区"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">鹿泉区</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=栾城区"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">栾城区</a>
                         </div>
-                        <div class="clumn_con">
-                            <ul class="clu_page_ul">
-                                <li style="height: 3px"><a href="#" style="height: 3px">&nbsp;</a></li>
-                                <!-- 市辖区（8个） -->
-                                <li>
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=长安区">长安区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=桥西区">桥西区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=新华区">新华区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=裕华区">裕华区</a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=井陉矿区">井陉矿区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=藁城区">藁城区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=鹿泉区">鹿泉区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=栾城区">栾城区</a>
-                                </li>
-                                <!-- 县（11个） -->
-                                <li>
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=正定县">正定县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=深泽县">深泽县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=无极县">无极县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=赵县">赵县</a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=高邑县">高邑县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=元氏县">元氏县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=赞皇县">赞皇县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=井陉县">井陉县</a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=平山县">平山县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=灵寿县">灵寿县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=行唐县">行唐县</a>
-                                </li>
-                                <!-- 县级市（3个） -->
-                                <li>
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=辛集市">辛集市</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a
-                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=晋州市">晋州市</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=新乐市">新乐市</a>
-                                </li>
-                            </ul>
+                
+                        <!-- 县 -->
+                        <div style="margin-bottom: 8px; font-weight: bold; color: #333;">县</div>
+                        <div style="margin-bottom: 12px; line-height: 1.8;">
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=正定县"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">正定县</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=深泽县"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">深泽县</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=无极县"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">无极县</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=赵县"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">赵县</a><br>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=高邑县"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">高邑县</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=元氏县"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">元氏县</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=赞皇县"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">赞皇县</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=井陉县"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">井陉县</a><br>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=平山县"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">平山县</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=灵寿县"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">灵寿县</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=行唐县"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">行唐县</a>
+                        </div>
+                
+                        <!-- 县级市 -->
+                        <div style="margin-bottom: 8px; font-weight: bold; color: #333;">县级市</div>
+                        <div style="line-height: 1.8;">
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=辛集市"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">辛集市</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=晋州市"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">晋州市</a>
+                            <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=新乐市"
+                                style="margin: 0 6px; color: #0066cc; text-decoration: none; transition: color 0.2s;">新乐市</a>
                         </div>
                     </div>
+                </div>
+                
+                <!-- 悬浮变色样式（必须放在页面<head>内，或模块下方） -->
+                <style type="text/css">
+                    /* 强制生效hover样式，优先级拉满 */
+                    .clumn_con a:hover {
+                        color: #ff6600 !important;
+                        /* 橙色（可换成你想要的颜色，比如#e63946红色） */
+                        text-decoration: underline !important;
+                        /* 悬浮显示下划线 */
+                    }
+                </style>
                     <div class="col-md-4 column" style="width:260px;border:1px solid #E8E8E8">
                         <img src="../image/fwbz.png">
                     </div>

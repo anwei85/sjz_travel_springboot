@@ -29,7 +29,7 @@ body {
 	<jsp:include page="./header.jsp"></jsp:include>
 
 	<div class="container"
-		 style="width: 98%;height:50%; background: url('../image/zhucedenglu.PNG');">
+		style="width: 98%;height:50%; background: url('../image/zhucedenglu.PNG');">
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8" style=" width: 650px; padding: 10px 100px; margin: 30px; border: 7px solid #ccc;">
@@ -84,7 +84,7 @@ body {
 
     <!-- 信息编辑弹框 -->
     <div class="modal fade" id="infoEditDialog" tabindex="-1" role="dialog"
-         aria-labelledby="myModalLabel">
+        aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -140,7 +140,7 @@ body {
 
     <!-- 修改密码弹框 -->
     <div class="modal fade" id="pwdEditDialog" tabindex="-1" role="dialog"
-         aria-labelledby="myModalLabel">
+        aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

@@ -88,28 +88,28 @@
                                             </div>
                                         </div>
                                         <div class="js_con clearfix">
-                                                 <div class="js_c" style="width:120px">
-                                                     <p>
-                                                         <font style="color: #9d9d9d">${ticket.name}</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                     </p>
-                                                 </div>
-                                                 <div class="js_c" style="width:260px">
-                                                     <p>
-                                                         <font style="color: #9d9d9d">${ticket.explain}</font>
-                                                     </p>
-                                                 </div>
-                                                 <div class="js_c">
-                                                     <p>
-                                                         <font style="color: #9d9d9d">${ticket.dprice}</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                         <font style="color: #9d9d9d">${ticket.mprice}</font>
-                                                     </p>
-                                                 </div>
-                                                 <div class="js_r" style="padding-right: 19px;padding-top: 5px ">
-                                                     <p>
-                                                         <input type="text" name="num" value="1" maxlength="3" size="3">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                         <font style="color: #9d9d9d">在线支付</font>
-                                                     </p>
-                                                 </div>
+                                                <div class="js_c" style="width:120px">
+                                                    <p>
+                                                        <font style="color: #9d9d9d">${ticket.name}</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    </p>
+                                                </div>
+                                                <div class="js_c" style="width:260px">
+                                                    <p>
+                                                        <font style="color: #9d9d9d">${ticket.explain}</font>
+                                                    </p>
+                                                </div>
+                                                <div class="js_c">
+                                                    <p>
+                                                        <font style="color: #9d9d9d">${ticket.dprice}</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <font style="color: #9d9d9d">${ticket.mprice}</font>
+                                                    </p>
+                                                </div>
+                                                <div class="js_r" style="padding-right: 19px;padding-top: 5px ">
+                                                    <p>
+                                                        <input type="text" name="num" value="1" maxlength="3" size="3">&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <font style="color: #9d9d9d">在线支付</font>
+                                                    </p>
+                                                </div>
                                         </div>
                                 </form>
                             </div>

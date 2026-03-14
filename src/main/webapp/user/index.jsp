@@ -31,7 +31,7 @@
 					<!-- 轮播图的轮播图片 -->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active" style="height:400px;">
-							<img src="../image/lb1.png">
+							<img src="../image/lb1.jpg">
 							<div class="carousel-caption">
 								<!-- 轮播图上的文字 -->
                                 <img src="../image/lbw.png">
@@ -114,33 +114,62 @@
                         <div class="clumn_tit t01">
                             <span>石家庄当地游</span>
                         </div>
-                        <div class="clumn _con">
-                            <ul class="clu_ul page_ul">
+                        <div class="clumn_con">
+                            <ul class="clu_page_ul">
                                 <li style="height: 3px"><a href="#" style="height: 3px">&nbsp;</a></li>
-                                <li><a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=新市区">新市区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=北市区">北市区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=南市区">南市区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=满城县">满城县</a></li>
-                                <li><a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=清苑县">清苑县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=涞水县">涞水县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=阜平县">阜平县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=徐水县">徐水县</a></li>
-                                <li><a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=定兴县">定兴县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=高阳县">高阳县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=容城县">容城县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=来源县">涞源县</a></li>
-                                <li><a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=望都县">望都县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=安新县">安新县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=曲阳县">曲阳县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=易县">易县</a></li>
-                                <li><a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=博野县">顺平县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=新市区">博野县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=涿州市">涿州市</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=蠡县">蠡县</a></li>
-                                <li><a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=定州市">定州市</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=安国市">安国市</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=高碑店">高碑店</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="${pageContext.request.contextPath }/getScenicPageForUser?addr=雄县">雄县 </a></li>
+                                <!-- 市辖区（8个） -->
+                                <li>
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=长安区">长安区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=桥西区">桥西区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=新华区">新华区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=裕华区">裕华区</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=井陉矿区">井陉矿区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=藁城区">藁城区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=鹿泉区">鹿泉区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=栾城区">栾城区</a>
+                                </li>
+                                <!-- 县（11个） -->
+                                <li>
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=正定县">正定县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=深泽县">深泽县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=无极县">无极县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=赵县">赵县</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=高邑县">高邑县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=元氏县">元氏县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=赞皇县">赞皇县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=井陉县">井陉县</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=平山县">平山县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=灵寿县">灵寿县</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=行唐县">行唐县</a>
+                                </li>
+                                <!-- 县级市（3个） -->
+                                <li>
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=辛集市">辛集市</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a
+                                        href="${pageContext.request.contextPath}/getScenicPageForUser?addr=晋州市">晋州市</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="${pageContext.request.contextPath}/getScenicPageForUser?addr=新乐市">新乐市</a>
+                                </li>
                             </ul>
                         </div>
                     </div>

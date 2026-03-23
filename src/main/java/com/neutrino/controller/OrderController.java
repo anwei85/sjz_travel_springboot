@@ -135,7 +135,7 @@ public class OrderController {
                 pd_FrpId, pr_NeedResponse, keyValue);
 
 
-        String url = "http://tech.yeepay.com:8080/robot/debug.action?pd_FrpId="+pd_FrpId+
+        String url = "https://www.yeepay.com/app-merchant-proxy/node?pd_FrpId="+pd_FrpId+
                 "&p0_Cmd="+p0_Cmd+
                 "&p1_MerId="+p1_MerId+
                 "&p2_Order="+p2_Order+

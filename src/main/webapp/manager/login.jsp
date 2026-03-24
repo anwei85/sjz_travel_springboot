@@ -46,7 +46,7 @@
 
 
 <div class="container"
-     style="width: 100%; height: 660px; background: url('../image/zhucedenglu.PNG') no-repeat;">
+     style="width: 100%; min-height: 100vh; background: url('../image/zhucedenglu.PNG') no-repeat center center; background-size: cover;">
     <div class="row">
         <div class="col-md-3">
         </div>

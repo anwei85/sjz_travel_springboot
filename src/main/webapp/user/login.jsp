@@ -50,7 +50,7 @@ font {
 
 
 	<div class="container"
-		style="width: 100%; height: 460px; background: #FF2C4C url('../image/zhucedenglu.PNG') no-repeat;">
+		style="width: 100%; min-height: 100vh; background: #FF2C4C url('../image/zhucedenglu.PNG') no-repeat center center; background-size: cover;">
 		<div class="row">
 			<div class="col-md-7">
 				<!--<img src="../image/login.jpg" width="500" height="330" alt="会员登录" title="会员登录">-->

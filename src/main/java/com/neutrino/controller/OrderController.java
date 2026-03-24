@@ -100,22 +100,14 @@ public class OrderController {
     public String payForOrder(Model model, HttpServletRequest request, HttpServletResponse response, HttpSession session){
         // 获得订单编号
         String orderid = request.getParameter("no");
+        String pd_FrpId = request.getParameter("pd_FrpId");
         
-        // 模拟支付成功流程
-        try {
-            // 根据订单编号获取订单
-            Order order = orderService.getOrderByNo(orderid);
-            // 更新订单状态为已支付
-            orderService.updateStateToPayById(order.getId());
-            // 更新景点出售数量
-            scenicService.updateScenicSales(order.getTicket().getFid());
-            // 跳转到支付成功页面
-            return "redirect:/paySuccessPage?no="+orderid+"&code="+order.getCode();
-        } catch (Exception e) {
-            e.printStackTrace();
-            // 异常情况下返回订单信息页面
-            return "user/orderInfo";
-        }
+        // 存储订单信息到session，供模拟支付页面使用
+        session.setAttribute("orderId", orderid);
+        session.setAttribute("bank", pd_FrpId);
+        
+        // 跳转到模拟支付页面
+        return "user/mockPay";
 
     }
 
@@ -177,5 +169,37 @@ public class OrderController {
         model.addAttribute("code",code);
         model.addAttribute("no",no);
         return "user/paySuccess";
+    }
+    
+    @RequestMapping(value = "/mockPayResult")
+    public String mockPayResult(HttpServletRequest request, HttpSession session, Model model){
+        String orderId = request.getParameter("orderId");
+        String result = request.getParameter("result");
+        
+        try {
+            if ("success".equals(result)) {
+                // 模拟支付成功
+                Order order = orderService.getOrderByNo(orderId);
+                orderService.updateStateToPayById(order.getId());
+                scenicService.updateScenicSales(order.getTicket().getFid());
+                return "redirect:/paySuccessPage?no="+orderId+"&code="+order.getCode();
+            } else {
+                // 模拟支付失败
+                Order order = orderService.getOrderByNo(orderId);
+                model.addAttribute("errorMsg", "支付失败，请重试");
+                model.addAttribute("order", order);
+                model.addAttribute("mprice", order.getPaid()/order.getNum());
+                model.addAttribute("name", order.getTicket().getName());
+                return "user/orderInfo";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Order order = orderService.getOrderByNo(orderId);
+            model.addAttribute("errorMsg", "支付处理失败，请重试");
+            model.addAttribute("order", order);
+            model.addAttribute("mprice", order.getPaid()/order.getNum());
+            model.addAttribute("name", order.getTicket().getName());
+            return "user/orderInfo";
+        }
     }
 }

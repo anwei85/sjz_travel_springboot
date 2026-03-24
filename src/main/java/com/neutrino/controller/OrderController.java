@@ -97,63 +97,25 @@ public class OrderController {
     }
 
     @RequestMapping(value = "/payForOrder")
-    public ModelAndView payForOrder(Model model, HttpServletRequest request, HttpServletResponse response, HttpSession session){
-        //在线支付
-		/*if(pd_FrpId.equals("ABC-NET-B2C")){
-			//介入农行的接口
-		}else if(pd_FrpId.equals("ICBC-NET-B2C")){
-			//接入工行的接口
-		}*/
-        //只接入一个接口，这个接口已经集成所有的银行接口了  ，这个接口是第三方支付平台提供的
-        //接入的是易宝支付
-        // 获得支付必须基本数据
+    public String payForOrder(Model model, HttpServletRequest request, HttpServletResponse response, HttpSession session){
+        // 获得订单编号
         String orderid = request.getParameter("no");
-        //String money = order.gePaid()+"";//支付金额
-        String money = "0.01";//支付金额
-        // 银行
-        String pd_FrpId = request.getParameter("pd_FrpId");
-        // 发给支付公司需要哪些数据
-        String p0_Cmd = "Buy";
-        String p1_MerId = ResourceBundle.getBundle("merchantInfo").getString("p1_MerId");
-        String p2_Order = orderid;
-        String p3_Amt = money;
-        String p4_Cur = "CNY";
-        String p5_Pid = "";
-        String p6_Pcat = "";
-        String p7_Pdesc = "";
-        // 支付成功回调地址 ---- 第三方支付公司会访问、用户访问
-        // 第三方支付可以访问网址
-        String p8_Url = ResourceBundle.getBundle("merchantInfo").getString("callback");
-        String p9_SAF = "";
-        String pa_MP = "";
-        String pr_NeedResponse = "1";
-        // 加密hmac 需要密钥
-        String keyValue = ResourceBundle.getBundle("merchantInfo").getString(
-                "keyValue");
-        String hmac = PaymentUtil.buildHmac(p0_Cmd, p1_MerId, p2_Order, p3_Amt,
-                p4_Cur, p5_Pid, p6_Pcat, p7_Pdesc, p8_Url, p9_SAF, pa_MP,
-                pd_FrpId, pr_NeedResponse, keyValue);
-
-
-        String url = "https://www.yeepay.com/app-merchant-proxy/node?pd_FrpId="+pd_FrpId+
-                "&p0_Cmd="+p0_Cmd+
-                "&p1_MerId="+p1_MerId+
-                "&p2_Order="+p2_Order+
-                "&p3_Amt="+p3_Amt+
-                "&p4_Cur="+p4_Cur+
-                "&p5_Pid="+p5_Pid+
-                "&p6_Pcat="+p6_Pcat+
-                "&p7_Pdesc="+p7_Pdesc+
-                "&p8_Url="+p8_Url+
-                "&p9_SAF="+p9_SAF+
-                "&pa_MP="+pa_MP+
-                "&pr_NeedResponse="+pr_NeedResponse+
-                "&hmac="+hmac;
-
-        //重定向到第三方支付平台
-        //response.sendRedirect(url);//return "redirect:url";
-        //springmvc重定向到外网的方法
-        return  new ModelAndView(new RedirectView(url));
+        
+        // 模拟支付成功流程
+        try {
+            // 根据订单编号获取订单
+            Order order = orderService.getOrderByNo(orderid);
+            // 更新订单状态为已支付
+            orderService.updateStateToPayById(order.getId());
+            // 更新景点出售数量
+            scenicService.updateScenicSales(order.getTicket().getFid());
+            // 跳转到支付成功页面
+            return "redirect:/paySuccessPage?no="+orderid+"&code="+order.getCode();
+        } catch (Exception e) {
+            e.printStackTrace();
+            // 异常情况下返回订单信息页面
+            return "user/orderInfo";
+        }
 
     }
 

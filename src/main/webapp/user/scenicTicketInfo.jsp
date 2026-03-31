@@ -56,6 +56,7 @@
                                                 <span class="fn_o">￥</span><b>728</b>起
                                             </p>
                                             <a href="#" class="btn btn-default btn-info" data-toggle="modal" data-target="#shouldKnowDialog" >购买须知</a>
+                                            <a href="${pageContext.request.contextPath }/favorites/toggle?targetId=${scenic.id}&targetType=1" class="btn btn-default btn-success" style="margin-top: 10px">收藏</a>
                                         </div>
                                     </div>
                                     <div class="js_con clearfix">
@@ -117,6 +118,63 @@
                 <div class="col-md-4 column" style="width:260px;">
                     <div class="col-md-4 column" style="width:260px;border:1px solid #E8E8E8">
                         <img src="../image/fwbz.png">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 评价部分 -->
+            <div class="container-fluid" style="padding-left: 0px; margin-top: 20px">
+                <div class="col-md-8" style="width:900px; padding-left: 0px">
+                    <div class="mf_box">
+                        <div class="mf_tit clearfix" style="background-color: white">
+                            <span>评价</span>
+                        </div>
+                        <div class="js_wrap claerdix">
+                            <p>&nbsp;</p>
+                            <!-- 评价表单 -->
+                            <div class="js_wrap claerdix" style="background-color: whitesmoke; padding: 20px">
+                                <form action="${pageContext.request.contextPath }/review/add" method="post">
+                                    <input type="hidden" name="targetId" value="${scenic.id}">
+                                    <input type="hidden" name="targetType" value="1">
+                                    <div class="form-group">
+                                        <label>评分：</label>
+                                        <select name="rating" class="form-control" style="width: 100px; display: inline-block">
+                                            <option value="5">5星</option>
+                                            <option value="4">4星</option>
+                                            <option value="3">3星</option>
+                                            <option value="2">2星</option>
+                                            <option value="1">1星</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>评价内容：</label>
+                                        <textarea name="content" class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-default btn-info">提交评价</button>
+                                </form>
+                            </div>
+                            <p>&nbsp;</p>
+                            <!-- 评价列表 -->
+                            <div class="js_wrap claerdix" style="background-color: whitesmoke;">
+                                <c:forEach items="${reviews}" var="review">
+                                    <div class="js_con clearfix" style="border-bottom: 1px solid #ddd; padding: 10px">
+                                        <div class="js_l" style="width: 100px;">
+                                            <p>${review.user.username}</p>
+                                            <p>${review.createTime}</p>
+                                        </div>
+                                        <div class="js_c" style="width: 600px;">
+                                            <p>评分：${review.rating}星</p>
+                                            <p>${review.content}</p>
+                                        </div>
+                                    </div>
+                                </c:forEach>
+                                <c:if test="${empty reviews}">
+                                    <div class="js_con clearfix" style="padding: 20px; text-align: center;">
+                                        <p>暂无评价</p>
+                                    </div>
+                                </c:if>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

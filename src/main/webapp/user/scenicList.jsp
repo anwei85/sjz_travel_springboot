@@ -36,11 +36,11 @@
                                      <div class="js_wrap claerdix" style="background-color: whitesmoke;">
                                         <div class="js_con clearfix">
                                             <div class="js_l">
-                                                <a href="#"><img src="../${scenic.pic }"></a>
+                                                <a href="${pageContext.request.contextPath }/getScenicDetail?id=${scenic.id}"><img src="../${scenic.pic }"></a>
                                             </div>
                                             <div class="js_c">
                                                 <p>
-                                                    <b>【${scenic.name}】</b>
+                                                    <b>【<a href="${pageContext.request.contextPath }/getScenicDetail?id=${scenic.id}" style="color: #333; text-decoration: none;">${scenic.name}</a>】</b>
                                                 </p>
                                                 <p>&nbsp;&nbsp;<font style="color: #9d9d9d">景点主题：</font>
                                                         ${scenic.theme}</p>

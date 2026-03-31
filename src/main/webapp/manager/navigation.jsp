@@ -59,6 +59,10 @@
                         class="fa fa-dashboard fa-fw"></i> 美食管理</a></li>
                 <li><a href="${pageContext.request.contextPath }/manageOrder"><i
                         class="fa fa-dashboard fa-fw"></i> 订单管理</a></li>
+                <li><a href="${pageContext.request.contextPath }/manageFavorites"><i
+                        class="fa fa-dashboard fa-fw"></i> 收藏管理</a></li>
+                <li><a href="${pageContext.request.contextPath }/reviewList"><i
+                        class="fa fa-dashboard fa-fw"></i> 评价管理</a></li>
                 <li><a href="${pageContext.request.contextPath }/manageVisitor"><i
                         class="fa fa-dashboard fa-fw"></i> 用户管理</a></li>
                 <c:if test="${manager.flag==1}">

@@ -2,7 +2,9 @@ package com.neutrino.controller;
 
 
 import com.neutrino.entity.Manager;
+import com.neutrino.entity.Review;
 import com.neutrino.service.ManagerService;
+import com.neutrino.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +21,10 @@ import java.util.UUID;
 public class ManagerController {
     @Autowired
     ManagerService managerService;
+    @Autowired
+    ReviewService reviewService;
+    @Autowired
+    com.neutrino.service.FavoritesService favoritesService;
 
     /**
      * 新增管理员
@@ -92,5 +98,56 @@ public class ManagerController {
         //从session中将user删除
         session.removeAttribute("user");
         return "manager/login";
+    }
+
+    /**
+     * 获取评价列表
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/reviewList")
+    public String getReviewList(Model model){
+        List<Review> reviews = reviewService.getAllReviews();
+        model.addAttribute("reviews", reviews);
+        return "manager/reviewList";
+    }
+
+    /**
+     * 审核评价
+     * @param id
+     * @param state
+     * @return
+     */
+    @RequestMapping(value = "/auditReview")
+    public String auditReview(Integer id, Integer state){
+        Review review = reviewService.getReviewById(id);
+        if(review != null){
+            review.setState(state);
+            reviewService.updateReview(review);
+        }
+        return "redirect:/reviewList";
+    }
+
+    /**
+     * 获取所有收藏列表
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/manageFavorites")
+    public String getFavoritesList(Model model){
+        java.util.List<com.neutrino.entity.Favorites> favorites = favoritesService.getAllFavorites();
+        model.addAttribute("favorites", favorites);
+        return "manager/favoritesList";
+    }
+
+    /**
+     * 删除收藏
+     * @param id
+     * @return
+     */
+    @RequestMapping(value = "/deleteFavorites")
+    public String deleteFavorites(Integer id){
+        favoritesService.deleteFavorites(id);
+        return "redirect:/manageFavorites";
     }
 }

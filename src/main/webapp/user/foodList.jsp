@@ -41,6 +41,9 @@
                                                     ${food.describe}</p>
                                                 <p>&nbsp;&nbsp;<font style="color: #9d9d9d">推荐餐馆：</font>
                                                     ${food.commend}</p>
+                                                <p>
+                                                    <a href="${pageContext.request.contextPath }/favorites/toggle?targetId=${food.id}&targetType=2" class="btn btn-default btn-success" style="padding: 3px 6px;font-size: 11px">收藏</a>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>

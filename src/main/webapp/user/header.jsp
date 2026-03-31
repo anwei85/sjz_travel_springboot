@@ -48,6 +48,7 @@
                     <li><a href="${pageContext.request.contextPath }/getFoodPageForUser">美食佳肴</a></li>
                     <li><a href="${pageContext.request.contextPath }/userInfoPage">个人信息</a></li>
                     <li><a href="${pageContext.request.contextPath }/listOrder">我的订单</a></li>
+                    <li><a href="${pageContext.request.contextPath }/favoritesList">我的收藏</a></li>
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">

@@ -1,8 +1,10 @@
 package com.neutrino.controller;
 
 
+import com.neutrino.entity.Favorites;
 import com.neutrino.entity.QueryVo;
 import com.neutrino.entity.User;
+import com.neutrino.service.FavoritesService;
 import com.neutrino.service.UserService;
 import com.neutrino.utils.MD5Utils;
 import com.neutrino.utils.MailUtils;
@@ -18,12 +20,15 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 import java.util.UUID;
 
 @Controller
 public class UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private FavoritesService favoritesService;
 
     /**
      * 用户登录
@@ -211,5 +216,22 @@ public class UserController {
         user.setUserid(user1.getUserid());
         userService.updateUserInfo(user);
         return "OK";
+    }
+
+    /**
+     * 获取用户收藏列表
+     * @param model
+     * @param session
+     * @return
+     */
+    @RequestMapping(value = "/favoritesList")
+    public String getFavoritesList(Model model, HttpSession session){
+        User user = (User)session.getAttribute("user");
+        if(user == null){
+            return "user/login";
+        }
+        List<Favorites> favorites = favoritesService.getFavoritesByUser(user.getUserid());
+        model.addAttribute("favorites", favorites);
+        return "user/favoritesList";
     }
 }

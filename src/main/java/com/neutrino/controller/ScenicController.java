@@ -3,8 +3,10 @@ package com.neutrino.controller;
 
 
 import com.neutrino.entity.QueryVo;
+import com.neutrino.entity.Review;
 import com.neutrino.entity.Scenic;
 import com.neutrino.entity.Ticket;
+import com.neutrino.service.ReviewService;
 import com.neutrino.service.ScenicService;
 import com.neutrino.service.TicketService;
 import com.neutrino.utils.Page;
@@ -27,6 +29,8 @@ public class ScenicController {
     ScenicService scenicService;
     @Autowired
     TicketService ticketService;
+    @Autowired
+    ReviewService reviewService;
 
     /**
      * 管理员管理所有景点
@@ -136,5 +140,22 @@ public class ScenicController {
         Map<String,Object> map = new HashMap<String,Object>();
         map.put("data",list);
         return map;
+    }
+
+    /**
+     * 获取景点详情和评价列表
+     * @param id
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/getScenicDetail")
+    public String getScenicDetail(Integer id, Model model){
+        Scenic scenic = scenicService.getScenicById(id);
+        List<Ticket> ticketList = ticketService.selectTicketListByFid(id);
+        scenic.setTicketList(ticketList);
+        List<Review> reviews = reviewService.getReviewsByTarget(id, 1);
+        model.addAttribute("scenic", scenic);
+        model.addAttribute("reviews", reviews);
+        return "user/scenicTicketInfo";
     }
 }

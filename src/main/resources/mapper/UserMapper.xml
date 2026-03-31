@@ -87,4 +87,8 @@
         set state = 2
         where userid = #{id}
     </update>
+
+    <select id="getUserById" parameterType="String" resultType="com.neutrino.entity.User">
+        select * from USER where userid = #{id}
+    </select>
 </mapper>

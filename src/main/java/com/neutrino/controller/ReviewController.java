@@ -21,16 +21,17 @@ public class ReviewController {
     @RequestMapping("/add")
     public ModelAndView addReview(Review review, HttpSession session) {
         ModelAndView mv = new ModelAndView();
-        String userId = (String) session.getAttribute("userid");
-        if (userId == null) {
-            mv.setViewName("user/login");
+        com.neutrino.entity.User user = (com.neutrino.entity.User) session.getAttribute("user");
+        if (user == null) {
+            mv.setViewName("/user/login");
             return mv;
         }
+        String userId = user.getUserid();
         review.setUserId(userId);
         review.setCreateTime(new Date());
         review.setState(0); // 待审核
         reviewService.addReview(review);
-        mv.setViewName("redirect:/index");
+        mv.setViewName("redirect:/getScenicDetail?id=" + review.getTargetId());
         return mv;
     }
 

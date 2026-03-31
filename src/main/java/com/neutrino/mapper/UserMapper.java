@@ -28,4 +28,5 @@ public interface UserMapper {
     public List<User> selectCustomerListByQueryVo(QueryVo vo);
 
     int updateStateById(String id);
+    User getUserById(String id);
 }

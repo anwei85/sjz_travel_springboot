@@ -53,7 +53,7 @@
                                         <div class="js_r">
                                             <p>&nbsp;</p>
                                             <p>
-                                                <span class="fn_o">￥</span><b>728</b>起
+                                                <span class="fn_o">￥</span><b>${scenic.ticketList[0].mprice}</b>起
                                             </p>
                                             <a href="#" class="btn btn-default btn-info" data-toggle="modal" data-target="#shouldKnowDialog" >购买须知</a>
                                             <a href="${pageContext.request.contextPath }/favorites/toggle?targetId=${scenic.id}&targetType=1" class="btn btn-default btn-success" style="margin-top: 10px">收藏</a>
